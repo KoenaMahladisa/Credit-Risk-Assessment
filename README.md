@@ -15,27 +15,27 @@ The primary problem addressed by the data is the quantification of financial ris
 1.3 Purpose of the Project
 The purpose of this project is to:
 
-Analyze and understand the structure and characteristics of the creditworthiness dataset.   
+- Analyze and understand the structure and characteristics of the creditworthiness dataset.   
 
-Identify data quality issues and prepare the data for analysis and modeling.   
+- Identify data quality issues and prepare the data for analysis and modeling.   
 
-Explore relationships and patterns among variables that may be associated with creditworthiness.   
+- Explore relationships and patterns among variables that may be associated with creditworthiness.   
 
-Apply the preprocessing and feature preparation steps implemented in the notebook.   
+- Apply the preprocessing and feature preparation steps implemented in the notebook.   
 
-Develop and evaluate machine-learning model(s) for predicting or assessing creditworthiness.   
+- Develop and evaluate machine-learning model(s) for predicting or assessing creditworthiness.   
 
-Use the findings to provide practical insights and recommendations for improving data-driven credit assessment.  
+- Use the findings to provide practical insights and recommendations for improving data-driven credit assessment.  
 
 2. Technical Stack & Architecture
 2.1 Model Training (train_model.py)
-Dataset Loading & Preprocessing: Reads the Excel dataset, capitalizes column names, and applies one-hot encoding using pandas (pd.get_dummies with drop_first=True).   
+- Dataset Loading & Preprocessing: Reads the Excel dataset, capitalizes column names, and applies one-hot encoding using pandas (pd.get_dummies with drop_first=True).   
 
-Feature Preservation: Saves the exact feature columns (model_columns.joblib) to ensure consistent alignment of user inputs during inference.   
+- Feature Preservation: Saves the exact feature columns (model_columns.joblib) to ensure consistent alignment of user inputs during inference.   
 
-Scaling & Splitting: Splits the data into training and testing sets (80-20 split) and scales features using StandardScaler.   
+- Scaling & Splitting: Splits the data into training and testing sets (80-20 split) and scales features using StandardScaler.   
 
-Machine Learning Model: Trains a RandomForestClassifier and exports the trained model (credit_model.joblib) and scaler (scaler.joblib) using joblib.   
+- Machine Learning Model: Trains a RandomForestClassifier and exports the trained model (credit_model.joblib) and scaler (scaler.joblib) using joblib.   
 
 2.2 Web Application (app.py)
 Built with Streamlit as an interactive dashboard (AI Creditworthiness Assessment System).   
